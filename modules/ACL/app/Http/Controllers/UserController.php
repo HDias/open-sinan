@@ -6,7 +6,6 @@ use ACL\Http\Requests\CreateUserRequest;
 use ACL\Http\Requests\UpdateUserPasswordRequest;
 use ACL\Http\Requests\UpdateUserRequest;
 use Illuminate\Http\Request;
-use Select\Model\Sexo;
 
 class UserController extends Controller
 {

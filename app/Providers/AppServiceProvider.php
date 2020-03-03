@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Model\Cid;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,5 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        // Models
+        $this->app->bind('app.model.cid', Cid::class);
     }
 }

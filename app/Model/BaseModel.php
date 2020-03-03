@@ -7,13 +7,14 @@ use App\Model\Scope\SoftDeleting;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use OwenIt\Auditing\Contracts\Auditable;
+use Wildside\Userstamps\Userstamps;
 
 /**
  * @property \Carbon\Carbon $deleted_at
  */
 class BaseModel extends Model implements Auditable
 {
-    use SoftDeletes, \OwenIt\Auditing\Auditable, SoftCascadeTrait;
+    use SoftDeletes, \OwenIt\Auditing\Auditable, SoftCascadeTrait, Userstamps;
 
     /**
      * Boot the soft deleting trait for a model.

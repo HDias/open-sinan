@@ -27,4 +27,5 @@ $this->get('/', 'HomeController@index')->name('home');
 $this->group(['prefix' => 'admin', 'middleware' => ['auth:web', 'needsPermission']], function () {
 
     include __DIR__ . '/dashboard.php';
+    include __DIR__ . '/cid.php';
 });

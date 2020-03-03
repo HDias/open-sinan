@@ -1,10 +1,10 @@
 <?php
 
-namespace ACL\Http\Requests;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateUserPasswordRequest extends FormRequest
+class UpdateCidRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,10 @@ class UpdateUserPasswordRequest extends FormRequest
     public function rules()
     {
         return [
-            'password'  => 'required|string|min:6|confirmed',
+            'cid' => 'required|string|max:255',
+            'descricao' => 'required|string|max:255',
+            'should_send_msg' => 'required|boolean',
+            'is_estigmatizado' => 'required|boolean',
         ];
     }
 }
